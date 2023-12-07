@@ -1,13 +1,18 @@
 package com.example.eComputer.service;
 import com.example.eComputer.domain.UserEntity;
+import com.example.eComputer.repository.UserRepository;
+import jakarta.transaction.Transactional;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-
 public interface UserService{
-    public Optional<UserEntity> getUserById(Long id);
-//    public UserEntity getStudentByName(String name);
+    public UserEntity getUserById(Long id);
+    //    public UserEntity getStudentByName(String name);
     public List<UserEntity> getAllUsers();
     public boolean exists(String email);
-    public UserEntity save(UserEntity student);
+    public boolean save(UserEntity student);
+    public boolean addAdmin(UserEntity user);
+
 }
