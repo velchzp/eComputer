@@ -52,5 +52,4 @@ public class UserControllerIntegrationTest {
                 .andExpect(jsonPath("$.email").value("john.doe@example.com"))
                 .andExpect(jsonPath("$.token").isNotEmpty());
     }
-
 }
