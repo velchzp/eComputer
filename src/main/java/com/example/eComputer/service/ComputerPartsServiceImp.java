@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+//Open closed
 @Service
 @Transactional
-public class ComputerPartsService {
+public class ComputerPartsServiceImp {
     @Autowired
     ComputerPartRepository computerPartRepository;
 
